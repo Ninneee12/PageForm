@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen"><!--Aqui eu faco o link da pagina css, rel de relacionada com folha de estilo
+    ref onde esta minha folha de estilo-->
+    <title>Formulário</title>
+</head>
+<body>
+
+    <div class="campo"><!-- Divide uma parte do codigo ou seja é uma caixa com infos da pag-->
+        <h1 id="titulo">Cadastro de Usuarios</h1><!--Titulo da pagina-->
+        <p id="subtitulo">Insira suas informações</p><!--Paragrafo-->
+        <br><!-- Pular a linha-->
+    </div>
+    <form><!--Inicia um formulario-->
+        <fieldset class="grupo"><!--Seria um agrupador de campos junta dois campos em uma caixa-->
+            <div class="campo"> <!-- Divide uma parte do codigo ou seja é uma caixa com infos-->
+                <label for="nome"><strong>Nome</strong></label><!--Explicação do Campo-->
+                <input type="text" name="nome" id="nome" required> <!--Entrada de valor com alguns atributos  tipo como texto nome como nome e o id como nome-->
+            </div>
+            <div class="campo">
+                <label for="sobrenome"><strong>Sobremone</strong></label><!--Explicação do Campo-->
+                <input type="text" name="sobremone" id="sobrenome" required><!--Entrada de valor com alguns atributos  tipo como texto nome como sobrenome e o id como sobrenome-->
+            </div>
+        </fieldset>
+
+        <div class="campo"> <!-- Divide uma parte do codigo ou seja é uma caixa com infos da pag-->
+            <label for="email"><strong>Email</strong></label><!--Explicação do Campo-->
+            <input type="email" name="email" id="email" required><!--Entrada que recebe atributo do tipo texto com o nome de email e com id de email-->
+        </div>
+
+        <div class="campo">
+            <label><strong>Qual Lado da Aplicação Você Desenvolve</strong> </label>
+            <label><!--Explicação do Campo-->
+                <input type="radio" name="devweb" value="frontend" checked> Front-end <!--Aqui crio um formulario com o radio que nada mais é o botão de check a opção checked faz com que ja venha selecionada essa opção-->
+            </label>
+            <label><!--Explicação do Campo-->
+                <input type="radio" name="devweb" value="backend">Back-end  <!--Aqui crio um formulario com o radio que nada mais é o botão de check  -->          
+            </label>
+            <label><!--Explicação do Campo-->
+                <input type="radio" name="devweb" value="fullstack">Fullstack <!--Aqui crio um formulario com o radio que nada mais é o botão de check -->
+            </label>
+        </div>
+         <div class="campo">
+            <label><strong>Qual seu nivel</strong></label> <!--Explicação do Campo-->
+            <select id="senioridade"><!--Essa opção é usada para abrir um campo para selecionar a opção-->
+            <option selected disabled value="">Selecione</option><!--Essa opção é utilizada para acrescentar 
+            o texto que sera selecionado ela cria uma opcao que n estara habilitado apenas como notificação
+            então utilizamos a opção selected para deixar essa opção selecionada e o disable para
+            disable para que n fique ativado e value iremos deixar sem valor pois ele n vai se referir a nada-->
+            <option>Junior</option><!--Apresenta as opções para selecionar-->
+            <option>Pleno</option><!--Apresenta as opções para selecionar-->
+            <option>Senior</option><!--Apresenta as opções para selecionar-->
+            </select>
+         </div>
+         <fieldset class="grupo">
+            <div id="check"> 
+                <label> <strong>Quais tecnologias você domina:</strong></label><br><br>
+                <input type="checkbox" id="tecnologia1" name="tecnlogia1" value="HTML"><!--Vai ser uma entrada do tipo flagar  texto com id tecnologia1 que vai caracterizar ele
+                com o nome de tecnologia e com o valor do texto que vamos por no caso html aqui ele apenas cria o quadradinho
+                identificando o que ele é, temos que criar uma label para aparecer o texo-->
+                <label for="tecnologia1">HTML</label><!--Precisamos dizer para qual valor ele tera referencia
+                quem ele esta indicando que no caso é para tecnologia1-->
+                <input type="checkbox" id="tecnologia2" name="tecnologia2" value="CSS">
+                <label for="tecnologia2">CSS</label>
+                <input type="checkbox" id="tecnologia3" name="tecnologia3" value="JAVASCRIPT">
+                <label for="tecnlogia3">JAVASCRIPT</label>
+                <input type="checkbox" id="tecnologia4" name="tecnologia4" value="PHP">
+                <label for="tecnologia4">PHP</label>
+                <input type="checkbox" id="tecnologia5" name="tecnologia5" value="C#">
+                <label for="tecnolgia5">C#</label>
+                <input type="checkbox" id="tecnologia6" name="tecnologia6" value="Python">
+                <label for="tecnologia6">Python</label>
+                <input type="checkbox" id="tecnologia7" name="tecnologia7" value="Java">
+                <label for="tecnologia7">Java</label>
+            </div>
+         </fieldset>
+         <div class="campo">
+            <br>
+            <label><strong>Conte mais sobre sua jornada:</strong></label>
+            <textarea rows="6" style=" width: 26em" id="experiencia" name="experiencia"></textarea><!--Aqui cria uma area de texto
+            com 6 linhas e com o estilo de largura com 26 em com o id de experiencia e nome de experiencia-->
+         </div>
+         <button type="submit">Enviar</button><!--Aqui vc cria um botao do tipo enviar-->
+    
+    </form>
+</body>
+</html>
